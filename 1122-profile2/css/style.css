@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -16,7 +14,7 @@
 
 h1,
 h2 {
-  font-family: "Press Start 2P", system-ui;
+  font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -29,17 +27,94 @@ body {
   background-color: #dbeafe;
   display: flex;
   padding: 104px 60px;
-  gap: 71px;
+  gap: 75px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* 가로로 div로 묶인 두 영역을 가운데 정렬하려면 align-items를 이용하자 */
 }
 
 .info {
   text-align: center;
+  width: 490px;
+  min-height: 421px;
+  position: relative;
+}
+
+.info > h1 {
+  margin: 25px 0 0;
+  font-size: 40px;
+}
+
+.info > h1 > span {
+  position: absolute;
+  bottom: 0;
+}
+
+.info > h1 > span:nth-child(1) {
+  bottom: 129px;
+  left: 13px;
+  transform: rotate(62deg);
+}
+
+.info > h1 > span:nth-child(2) {
+  bottom: 90px;
+  left: 32px;
+  transform: rotate(57deg);
+}
+.info > h1 > span:nth-child(3) {
+  bottom: 56px;
+  left: 60px;
+  transform: rotate(54deg);
+}
+
+.info > h1 > span:nth-child(4) {
+  bottom: 10px;
+  left: 134px;
+  transform: rotate(26deg);
+}
+
+.info > h1 > span:nth-child(5) {
+  bottom: 1px;
+  left: 178px;
+  transform: rotate(7deg);
+}
+.info > h1 > span:nth-child(6) {
+  bottom: 0;
+  left: 225px;
+  transform: rotate(-2deg);
+}
+.info > h1 > span:nth-child(7) {
+  bottom: 10px;
+  right: 134px;
+  transform: rotate(-23deg);
+}
+.info > h1 > span:nth-child(8) {
+  bottom: 30px;
+  right: 94px;
+  transform: rotate(-32deg);
+}
+.info > h1 > span:nth-child(9) {
+  bottom: 56px;
+  right: 60px;
+  transform: rotate(-40deg);
+}
+.info > h1 > span:nth-child(10) {
+  bottom: 90px;
+  right: 32px;
+  transform: rotate(-52deg);
+}
+.info > h1 > span:nth-child(11) {
+  bottom: 130px;
+  right: 13px;
+  transform: rotate(-60deg);
 }
 
 .introduce {
   display: flex;
   flex-direction: column;
   gap: 72px;
+  /* width: calc(100% - 565px); */
 }
 
 .introduce > div {
@@ -48,14 +123,50 @@ body {
   gap: 23px;
 }
 
-.sns-content {
-  background-color: #fff;
-  padding: 122px;
-  display: flex;
-  gap: 257px;
+.introduce > div > p {
+  line-height: 2.1;
 }
 
-figure > figcaption {
+.sns-content {
+  background-color: #fff;
+  padding: 122px 0;
+  display: flex;
+  gap: 257px;
+  justify-content: center;
+}
+
+.sns-content > a {
   text-decoration: none;
-  text-align: center;
+  color: #000;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+}
+
+figure > img {
+  position: relative;
+  display: block;
+  z-index: 2;
+  background-color: #fff;
+}
+
+figcaption {
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  /* 위로 보내는건데 왜 음수값인가? */
+  transform: translateX(-50%);
+  transition: 0.3s all;
+}
+
+/* figcaption에 플렉스를 지정하기 전 개발자도구에서 기본 지정값이 block으로 되어있어서 figcaption에 플렉스를 먹이니 벨로그의 글자가 아이콘만큼의 영역이 아닌 글씨만의 영역을 가지게 됨*/
+
+figure:hover figcaption {
+  bottom: -30px;
+  font-size: 18px;
+  color: #ababab;
 }
