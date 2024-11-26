@@ -11,6 +11,7 @@
 body {
   font-family: Pretendard;
   background-color: #ababab;
+  /* display: grid; */
 }
 
 .title {
@@ -18,6 +19,7 @@ body {
   padding: 20px;
   color: #fff;
   margin: 50px 0;
+  display: grid;
 }
 
 .title > h1 {
