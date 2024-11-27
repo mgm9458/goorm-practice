@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiosk Order System</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Cafe</h1>
+    <section class="menu">
+      <h2>- Menu -</h2>
+      <article data-name="토피 넛 라떼" data-price="5600">
+        <img src="img/image1.jpg" alt="토피 넛 라떼" />
+        <h3>토피 넛 라떼</h3>
+        <p>Toffee Nut Latte</p>
+        <p>
+          스타벅스의 겨울 시그니처 음료 버터 향이 은은하게 느껴지는 토피와
+          고소한 견과류의 풍미, 진한 에스프레소가 어우러진 크리스마스 시즌 음료
+        </p>
+        <p>5,600원</p>
+      </article>
+      <article data-name="아이스 토피 넛 라떼" data-price="6100">
+        <img src="img/image2.jpg" alt="아이스 토피 넛 라떼" />
+        <h3>아이스 토피 넛 라떼</h3>
+        <p>Iced Toffee Nut Latte</p>
+        <p>
+          (Iced) 스타벅스의 겨울 시그니처 음료 버터 향이 은은하게 느껴지는
+          토피와 고소한 견과류의 풍미, 진한 에스프레소가 어우러진 크리스마스
+          시즌 음료
+        </p>
+        <p>6,100원</p>
+      </article>
+      <article data-name="더블 에스프레소 크림 라떼" data-price="6100">
+        <img src="img/image3.jpg" alt="더블 에스프레소 크림 라떼" />
+        <h3>더블 에스프레소 크림 라떼</h3>
+        <p>Double Espresso Cream Latte</p>
+        <p>
+          달콤한 바닐라와 진한 에스프레소 풍미가 돋보이는 음료 음료 위 커피
+          크림이 입안을 부드럽게 감싸며 진한 커피와 커피 칩이 더욱 깊은 커피
+          향을 느끼게 해주는 음료
+        </p>
+        <p>6,100원</p>
+      </article>
+      <article data-name="아이스 더블 에스프레소 크림 라떼" data-price="6600">
+        <img src="img/image4.jpg" alt="아이스 더블 에스프레소 크림 라떼" />
+        <h3>아이스 더블 에스프레소 크림 라떼</h3>
+        <p>Iced Double Espresso Cream Latte</p>
+        <p>
+          (Iced) 달콤한 바닐라와 진한 에스프레소 풍미가 돋보이는 음료 음료 위
+          커피 크림이 입안을 부드럽게 감싸며 진한 커피와 커피 칩이 더욱 깊은
+          커피 향을 느끼게 해주는 음료
+        </p>
+        <p>6,600원</p>
+      </article>
+    </section>
+    <section class="cart">
+      <h2>Cart</h2>
+      <div id="cartItems">
+        <!-- 메뉴추가됨 -->
+      </div>
+      <h3 class="total">Total: <span id="totalAmount">0</span>원</h3>
+    </section>
+    <script src="js/kiosk.js"></script>
+  </body>
+</html>
