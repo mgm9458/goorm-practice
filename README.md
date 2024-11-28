@@ -18,3 +18,4 @@
 ## Kiosk
 
 <https://github.com/mgm9458/goorm-practice/tree/main/1127-kiosk>
+![스크린샷 2024-11-28 09 03 44](https://github.com/user-attachments/assets/e0e6e09b-fe2f-492d-9d86-b2c690f8136f)
