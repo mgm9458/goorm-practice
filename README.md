@@ -14,3 +14,7 @@
 
 <https://github.com/mgm9458/goorm-practice/tree/main/1125-gallery>
 ![image](https://github.com/user-attachments/assets/53c2d9c5-6ef9-4693-87a3-06bd22ab23b2)
+
+## Kiosk
+
+<https://github.com/mgm9458/goorm-practice/tree/main/1127-kiosk>
