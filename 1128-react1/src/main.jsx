@@ -6,7 +6,7 @@ import { createRoot } from "react-dom/client";
 // 이전에는 ReactDOM.render()를 사용했지만 현재는 createRoot를 권장
 import "./index.css";
 // index.css를 가져오는데 여기서 애플리케이션 전체에 적용되는 기본 스타일이 정의됨
-import App from "./App.jsx";
+import App from "./App.jsx"; // 초심플 카운터
 // App.jsx 파일에서 기본 컴포넌트인 App을 가져옴
 // App은 리액트 애플리케이션의 핵심 구성 요소. 이 파일에서 화면에 표시되는 내용을 정의함
 
@@ -17,7 +17,8 @@ createRoot(document.getElementById("root")).render(
   </StrictMode>
 );
 // 여기서 App을 렌더링하겠다고 선언했으니 App.jsx에 무엇이 적히든 그게 브라우저 화면에 표시된다
-
+// 하늘색은 무조건 컴포넌트라고 생각하면 됨
+// 노란색은 함수
 // react 패키지에서 strictmode를 불러와서 오류 등을 확인하고
 // react-dom/client에서 createRoot를 불러오는거고(DOM에 리액트 컴포넌트를 렌더링 하기 위해 필요한 기능)
 // 이거는 document에서 id가 root인 걸 가져와서 App을 strictmode로 검사 후  렌더해서 createRoot할게
