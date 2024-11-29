@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px 10px;
+}
+#root h1,
+#root p {
+  flex: 1 1 100%;
+}
