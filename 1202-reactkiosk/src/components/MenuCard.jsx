@@ -1,5 +1,5 @@
 // 이미지, 이름을 props로 전달 받아서 사용하면 되겠지?
-import { COFFEE } from "../data";
+import { COFFEE } from "../App";
 import Card from "./Card";
 import "./MenuCard.css";
 
