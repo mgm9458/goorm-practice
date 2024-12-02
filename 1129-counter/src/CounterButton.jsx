@@ -3,7 +3,8 @@
 function CounterButton({ label, func }) {
   // 초심자를 위한 props반영 설명
   return <button onClick={func}>{label}</button>;
-}
+} // onClick은 attribute 즉 속성임
+
 // function CounterButton({ label, onClick }) {
 //   // 보통은 이렇게 씀
 //   return (
