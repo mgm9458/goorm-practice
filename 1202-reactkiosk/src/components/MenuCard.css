@@ -1,0 +1,7 @@
+.menucard {
+  display: flex;
+}
+
+.menucard > li {
+  width: 33.33%;
+}
