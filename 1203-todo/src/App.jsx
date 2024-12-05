@@ -51,8 +51,6 @@ export default function App() {
     // 시간은 지나가면 다시 올 수 없는 고유한 값이라 id에 시간을 지정 많이 함
   };
 
-  // enter 했을 때 할일 등록되는 함수 추가 sdfsdf
-
   /**
    * U 업데이트 - 변경된 텍스트 반영
    * @param {*} id todo의 고유값 - Data.now() - 인자

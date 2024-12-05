@@ -14,6 +14,14 @@ const TodoInput = ({ addTodo }) => {
       setInput("");
     }
   };
+  // input 박스에 할 일을 작성하고 엔터키를 누르면 addTodo 함수가 실행된다
+
+  const handleEnter = (e) => {
+    if (e.keyCode === 229) return;
+    // 맥에서 한글을 입력하는 동작(onKeyDown/Up)에서 함수 콜링이 두 번 중첩되는 이슈가 있어 해결책 삽입
+    if (e.key === "Enter") handleAdd();
+    // Enter를 누르면 할 일 추가
+  };
 
   return (
     <div className={style.container}>
@@ -23,8 +31,9 @@ const TodoInput = ({ addTodo }) => {
         value={input}
         // value={input} = 상태가 변경되면
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleEnter}
         // onChange가 감지되면 (= 인풋에서 변화가 일어나면) setInput 함수 실행해. 그 이벤트가 일어난 요소의 값을 뜯어서 setInput(여기에 넣어라)
-        placeholder="쿠쿠루삥뽕"
+        placeholder="할 일을 입력해보자!"
       />
       <button className={style.btn} onClick={handleAdd}>
         할 일 등록
