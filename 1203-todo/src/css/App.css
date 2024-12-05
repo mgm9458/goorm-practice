@@ -1,5 +1,16 @@
-.title {
+.mainTitle {
+  display: flex;
+  align-items: flex-end;
   margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.title {
   font-size: 3em;
   /* 기본이 16px, 3배인 48px로 설정하려면 3em하면 됨 */
+}
+
+.date {
+  font-size: 14px;
+  color: #9d9d9d;
 }

@@ -5,6 +5,11 @@ import TodoList from "./components/TodoList";
 // 모듈 css를 가져오려면 객체에 싸매서 가져와야 함
 
 export default function App() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+
   // R 읽기 - 로컬스토리지에 저장되어있는 정보 읽어오기
 
   const [todos, setTodos] = useState(() => {
@@ -98,7 +103,10 @@ export default function App() {
 
   return (
     <>
-      <h1 className="title">To-do List</h1>
+      <div className="mainTitle">
+        <h1 className="title">To-do List</h1>
+        <p className="date">{`${year}/${month}/${day}`}</p>
+      </div>
       <TodoInput addTodo={addTodo} />
       <TodoList
         todos={todos}
