@@ -1,0 +1,36 @@
+li {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+li input[type="checkbox"] {
+  aspect-ratio: 1;
+  width: 24px;
+}
+
+li input[type="text"] {
+  height: 40px;
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #151515;
+  flex: 1;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  /* transparent - 투명도
+  이기 때문에 버튼의 보더값을 안보이게 하고 싶다면 이 속성을 사용하면 된다 */
+  color: #fff;
+  background-color: #1d8700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125400;
+  transition: 0.2s all;
+}

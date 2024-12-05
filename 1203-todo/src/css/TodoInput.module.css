@@ -3,6 +3,7 @@
   height: 40px;
   display: flex;
   gap: 10px;
+  margin-bottom: 16px;
 }
 
 .input {
