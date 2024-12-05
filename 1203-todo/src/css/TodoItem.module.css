@@ -15,11 +15,28 @@ li input[type="text"] {
   display: flex;
   padding: 8px 12px;
   border-radius: 8px;
-  background-color: #151515;
+  border: 1px solid #ddd;
+  color: #7e7e7e;
   flex: 1;
+  font-size: 1em;
+  font-family: Pretendard;
+}
+/* 수정버튼을 눌렀을 때 적용됨 */
+
+li input[type="text"]:hover {
+  border: 1px solid #1d8700;
+  transition: 0.3s all;
 }
 
-button {
+li span {
+  height: 40px;
+  text-align: left;
+  flex: 1;
+  padding: 0 13px;
+  align-content: center;
+}
+
+.edit {
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -30,7 +47,22 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.edit:hover {
   background-color: #125400;
   transition: 0.2s all;
+}
+
+.delete {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ff6d6d;
+  color: #ff0000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #ff2929;
+  transition: 0.2s all;
+  color: #fff;
 }
