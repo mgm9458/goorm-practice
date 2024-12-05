@@ -42,9 +42,10 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
 
       {/* 수정 여부 버튼 - 수정 상태이면 해당 버튼에 '등록'으로, 아니라면 '수정'으로 써줘 */}
       <button onClick={handleEdit}>{editing ? "등록" : "수정"}</button>
-
+      {/* 온클릭이 되면 hadleEdit 함수 불러올거야 */}
       {/* 삭제버튼 */}
       <button onClick={() => deleteTodo(todo.id)}>삭제</button>
+      {/* 온클릭이 되면 deleteTodo 함수가 실행될거야 */}
     </li>
   );
 };

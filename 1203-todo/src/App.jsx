@@ -79,9 +79,7 @@ export default function App() {
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>
-        todo.completed === id.completed
-          ? { ...todo, completed: !todo.completed }
-          : todo
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
       ) // 변경할 객체 value 값이 completed: true가 아닌 completed: !todo.completed로 작성한 이유는 true라고 작성하면 내가 이 토글을 눌렀을 때 상태가 무조건 true로 바뀌는데 토글을 끈 상태(false)도 있기때문에 너가 누른 상태에서 그걸 반전해! 때문에 부정 명령어를 작성한 것
     );
   };
