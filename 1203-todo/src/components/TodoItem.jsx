@@ -17,6 +17,13 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
     // 그렇지 않다면 수정상태를 반대로 돌려
   };
 
+  const editEnter = (e) => {
+    // if (e.keyCode === 229) return;
+    // 맥에서 한글을 입력하는 동작(onKeyDown/Up)에서 함수 콜링이 두 번 중첩되는 이슈가 있어 해결책 삽입
+    if (e.key === "Enter") updateTodo();
+    // Enter를 누르면 할 일 추가
+  };
+
   return (
     <li className={style.container}>
       <input
@@ -31,6 +38,7 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
           type="text"
           value={editText}
           onChange={(e) => setEditText(e.target.value)}
+          onKeyDown={editEnter}
         />
       ) : (
         <span
