@@ -34,18 +34,19 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
 
   return (
     <li className={style.container}>
-      <div
+      {/* <div
         onClick={() => !todo.completed}
         onChange={() => toggleComplete(todo.id)}
       >
         {todo.completed ? <MdRadioButtonUnchecked /> : <FaRegCircleCheck />}
-      </div>
+      </div> */}
 
-      {/* 원본 <input
+      <input
         type="checkbox"
         checked={todo.completed} // 완료여부 업데이트 해(상태값 반영)
         onChange={() => toggleComplete(todo.id)} // 해당 함수로 변경된 값 업데이트해(상태값 반영)
-      /> */}
+      />
+      {/* 원본 */}
 
       {/* // 수정 상태라면 input을 보여주고, 아니라면 span을 보여줘 */}
       {editing ? (
