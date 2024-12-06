@@ -32,6 +32,7 @@ const TodoInput = ({ addTodo }) => {
         // value={input} = 상태가 변경되면
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleEnter}
+        onBlur={handleAdd}
         // onChange가 감지되면 (= 인풋에서 변화가 일어나면) setInput 함수 실행해. 그 이벤트가 일어난 요소의 값을 뜯어서 setInput(여기에 넣어라)
         placeholder="할 일을 입력해보자!"
       />

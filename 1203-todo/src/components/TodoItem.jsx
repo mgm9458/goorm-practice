@@ -8,6 +8,7 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
   const [editText, setEditText] = useState(todo.text);
   // 기존 todo에 기록된 텍스트를 초기값으로 상태에 설정
 
+  // 할 일 수정 함수
   const handleEdit = () => {
     if (editing && editText.trim()) {
       // editing과 양 끝 공백을 제거한 editText가 있다면 App에 선언한 updateTodo(해당 id, 변경된 내용)를 실행해
@@ -17,11 +18,12 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
     // 그렇지 않다면 수정상태를 반대로 돌려
   };
 
+  // 엔터를 누르면 할 일 수정
   const editEnter = (e) => {
-    // if (e.keyCode === 229) return;
+    if (e.keyCode === 229) return;
     // 맥에서 한글을 입력하는 동작(onKeyDown/Up)에서 함수 콜링이 두 번 중첩되는 이슈가 있어 해결책 삽입
-    if (e.key === "Enter") updateTodo();
-    // Enter를 누르면 할 일 추가
+    if (e.key === "Enter") handleEdit();
+    // Enter를 누르면 업데이트
   };
 
   return (
