@@ -5,19 +5,20 @@ export default function Cart({ items }) {
   return (
     <section>
       <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <img src={item.imgSrc} alt={item.name} />
-            <div>
-              <h3>{item.name}</h3>
-              <button>-</button>
-              <span>{item.count}</span>
-              <button>+</button>
-            </div>
-            <span>{item.price * item.count} 원</span>
-            <button>삭제</button>
-          </li>
-        ))}
+        {items &&
+          items.map((item) => (
+            <li key={item.id}>
+              <img src={item.imgSrc} alt={item.name} />
+              <div>
+                <h3>{item.name}</h3>
+                <button>-</button>
+                <span>{item.count}</span>
+                <button>+</button>
+              </div>
+              <span>{item.price * item.count} 원</span>
+              <button>삭제</button>
+            </li>
+          ))}
       </ul>
     </section>
   );
