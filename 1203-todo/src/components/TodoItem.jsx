@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import style from "../css/TodoItem.module.css";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { FaRegEdit } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
+import { MdRadioButtonUnchecked } from "react-icons/md";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
   const [editing, setEditing] = useState(false);
@@ -8,6 +13,7 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
   const [editText, setEditText] = useState(todo.text);
   // 기존 todo에 기록된 텍스트를 초기값으로 상태에 설정
 
+  console.log(todo.completed);
   // 할 일 수정 함수
   const handleEdit = () => {
     if (editing && editText.trim()) {
@@ -28,11 +34,18 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
 
   return (
     <li className={style.container}>
-      <input
+      <div
+        onClick={() => !todo.completed}
+        onChange={() => toggleComplete(todo.id)}
+      >
+        {todo.completed ? <MdRadioButtonUnchecked /> : <FaRegCircleCheck />}
+      </div>
+
+      {/* 원본 <input
         type="checkbox"
-        checked={todo.completed} // 완료 여부 업데이트 해(상태값 반영)
-        onChange={() => toggleComplete(todo.id)} // 해당 함수로 변경된 값 업데이트 해(상태값 반영)
-      />
+        checked={todo.completed} // 완료여부 업데이트 해(상태값 반영)
+        onChange={() => toggleComplete(todo.id)} // 해당 함수로 변경된 값 업데이트해(상태값 반영)
+      /> */}
 
       {/* // 수정 상태라면 input을 보여주고, 아니라면 span을 보여줘 */}
       {editing ? (
@@ -53,12 +66,12 @@ const TodoItem = ({ todo, updateTodo, toggleComplete, deleteTodo }) => {
 
       {/* 수정 여부 버튼 - 수정 상태이면 해당 버튼에 '등록'으로, 아니라면 '수정'으로 써줘 */}
       <button onClick={handleEdit} className={style.edit}>
-        {editing ? "등록" : "수정"}
+        {editing ? <FaCheck /> : <FaRegEdit />}
       </button>
       {/* 온클릭이 되면 hadleEdit 함수 불러올거야 */}
       {/* 삭제버튼 */}
       <button onClick={() => deleteTodo(todo.id)} className={style.delete}>
-        삭제
+        <RiDeleteBin6Line />
       </button>
       {/* 온클릭이 되면 deleteTodo 함수가 실행될거야 */}
     </li>
