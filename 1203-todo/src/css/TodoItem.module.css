@@ -15,8 +15,8 @@ li input[type="text"] {
   display: flex;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  color: #7e7e7e;
+  border: 1px solid #ededed;
+  color: #909090;
   flex: 1;
   font-size: 1em;
   font-family: Pretendard;
@@ -43,11 +43,11 @@ li span {
   display: flex;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #d8d8d8;
   background-color: #fff;
   /* transparent - 투명도
   이기 때문에 버튼의 보더값을 안보이게 하고 싶다면 이 속성을 사용하면 된다 */
-  color: #b0b0b0;
+  color: #c7c7c7;
   cursor: pointer;
 }
 
@@ -67,14 +67,15 @@ li span {
   font-size: 18px;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #ff6d6d;
-  color: #ff0000;
+  border: 1px solid #ffb7b7;
+  color: #ff8888;
   background-color: #fff;
   cursor: pointer;
 }
 
 .delete:hover {
-  background-color: #ff2929;
+  border: 1px solid transparent;
+  background-color: #ff7c7c;
   transition: 0.2s all;
   color: #fff;
 }

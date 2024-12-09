@@ -15,6 +15,10 @@
   border: 1px solid #ddd;
 }
 
+.input::placeholder {
+  color: #bdbdbd;
+}
+
 .input:hover {
   border: 1px solid #1d8700;
   transition: 0.3s all;
