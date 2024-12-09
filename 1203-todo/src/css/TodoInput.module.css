@@ -33,6 +33,8 @@
   font-size: 1em;
   cursor: pointer;
   transition: border-color 0.25s;
+  display: flex;
+  align-items: center;
 }
 
 .btn:hover {

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import style from "../css/TodoInput.module.css";
+import { FaPlus } from "react-icons/fa6";
 
 // App.jsx에서 설정한 컴포넌트 안에 props로 addTodo를 설정했기 때문에 import가 필요없이 {}를 이용하면 됨
 const TodoInput = ({ addTodo }) => {
@@ -37,7 +38,7 @@ const TodoInput = ({ addTodo }) => {
         placeholder="할 일을 입력해보자!"
       />
       <button className={style.btn} onClick={handleAdd}>
-        할 일 등록
+        <FaPlus />
       </button>
     </div>
   );
