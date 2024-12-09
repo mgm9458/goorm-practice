@@ -105,7 +105,7 @@ export default function App() {
     <>
       <div className="mainTitle">
         <h1 className="title">To-do List</h1>
-        <p className="date">{`${year}/${month}/${day}`}</p>
+        <p className="date">{"Today - " + `${year}/${month}/${day}`}</p>
       </div>
       <TodoInput addTodo={addTodo} />
       <TodoList
