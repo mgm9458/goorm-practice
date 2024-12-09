@@ -1,13 +1,28 @@
 li {
   display: flex;
   align-items: center;
-  flex: 1;
+  justify-content: space-between;
   gap: 10px;
 }
 
-li input[type="checkbox"] {
-  aspect-ratio: 1;
-  width: 20px;
+.iconCheck {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+}
+
+.iconCheck svg {
+  width: 100%;
+  height: 100%;
+}
+
+.completed {
+  color: #1d8700;
+}
+
+.notCompleted {
+  color: #9e9e9e;
 }
 
 li input[type="text"] {
@@ -28,7 +43,7 @@ li input[type="text"]:hover {
   transition: 0.3s all;
 }
 
-li span {
+li .cancleLine {
   height: 40px;
   text-align: left;
   flex: 1;
@@ -78,4 +93,9 @@ li span {
   background-color: #ff7c7c;
   transition: 0.2s all;
   color: #fff;
+}
+
+.btncontainer {
+  display: flex;
+  gap: 10px;
 }
