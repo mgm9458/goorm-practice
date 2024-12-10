@@ -1,3 +1,18 @@
+.emptyState {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  /* border: 1px solid #ddd;
+  border-radius: 8px; */
+}
+
+.emptyText {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888888;
+}
+
 ul {
   width: 100%;
   list-style: none;
