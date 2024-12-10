@@ -19,10 +19,22 @@ li {
 
 .completed {
   color: #1d8700;
+  transition: 0.3s all;
+}
+
+.completed:hover {
+  color: #125400;
+  transition: 0.3s all;
 }
 
 .notCompleted {
-  color: #9e9e9e;
+  color: #a9a9a9;
+  transition: 0.3s all;
+}
+
+.notCompleted:hover {
+  color: #767676;
+  transition: 0.3s all;
 }
 
 li input[type="text"] {

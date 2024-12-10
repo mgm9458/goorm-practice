@@ -4,6 +4,7 @@ import style from "../css/TodoItem.module.css";
 // import cn from "classnames";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoCheckmarkCircle } from "react-icons/io5";
 // import { MdRadioButtonUnchecked } from "react-icons/md";
